@@ -24,6 +24,7 @@
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
   </head>
@@ -56,7 +57,7 @@
                 <a class="nav-link" href="#skills">Habilidades</a>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact">Contacto</a>
             </li>
           </ul>
         </div>
@@ -69,10 +70,12 @@
       >
         <div class="d-flex justify-content-center">
           <div class="text-center">
-            <h1 class="mx-auto my-0 text-uppercase">
-              Bienvenido a mi portafolio
+            <h1 class="mx-auto my-0 text-uppercase"data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
+              Bienvenido
             </h1>
-              <h2 class="text-white-50 mx-auto mt-2 mb-5">
+              <h2 class="text-white-50 mx-auto mt-2 mb-5"data-aos="fade-up" >
                 ¡Hola! mi nombre es Carlos Josué Ugalde López, este es mi portafolio, donde encontrarás quien soy yo, mis habilidades, mi experiencia y contacto.
               </h2>
             <a class="btn btn-primary" href="#about">Empezar</a>
@@ -82,13 +85,13 @@
     </header>
     <!-- About-->
     <section class="about-section text-center" id="about">
-        <div class="row flex-row"> <div class="col-lg-8">
+        <div class="row flex-row"> <div class="col-lg-8"data-aos="fade-right" data-aos-duration="2000">
             <h2 class="text-white mb-4">Un poco sobre mi</h2>
             <p class="text-white-50">
             Soy estudiante de último año de ingeniería en sistemas de información de la Universidad Nacional de Costa Rica, deseoso de poder formar parte de su empresa para poder realizar mi práctica profesional. Siempre dispuesto a aprender nuevas tecnologías y trabajar en equipos de desarrollo. Me considero una persona creativa y proactiva con capacidad de aprender rápidamente y adaptarme a nuevos entornos
             </p>
           </div>
-          <div class="col-lg-4"> <img src="assets/img/foto portafolio.png" alt="Tu foto" class="img-fluid"> </div>
+          <div class="col-lg-4"data-aos="fade-left" data-aos-duration="2000"> <img src="assets/img/foto portafolio.png" alt="Tu foto" class="img-fluid"> </div>
         </div>
       </div>
     </div>
@@ -111,8 +114,8 @@
             <div class="featured-text text-center text-lg-left">
               <h4>Sistema de gestión de asistencia a comedor</h4>
               <p class="text-black-50 mb-0">
-                Desarrollo de sistema de gestión y control de asistencia a comedor, esto por medio de scaneo de QR,
-                permitiendole asi a la institución agilizar procesos.
+                Desarrollo de sistema de gestión y control de asistencia a comedor, esto por medio de escaneo de QR,
+                permitiéndole así a la institución agilizar procesos.
               </p>
             </div>
           </div>
@@ -171,8 +174,8 @@
     <section class="signup-section" id="skills">
         <div class="container px-4 px-lg-5">
           <div class="row gx-4 gx-lg-5">
-            <div class="col-md-10 col-lg-8 mx-auto text-center">
-              <h1 class="text-white mb-5">Mis Habilidades Tecnológicas</h1>
+            <div class="col-md-10 col-lg-8 mx-auto text-center"data-aos="zoom-in">
+              <h1 class="text-white mb-5">Habilidades Tecnológicas</h1>
               <ul class="skills-list text-white">
                 <li class="skill-item">Adobe Illustrator</li>
                 <li class="skill-item">Adobe photoshop</li>
@@ -190,7 +193,7 @@
               </ul>
             </div>
             <div>\n </div>
-            <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <div class="col-md-10 col-lg-8 mx-auto text-center"data-aos="zoom-in">
                 <h1 class="text-white mb-5">Habilidades Blandas</h1>
                 <ul class="skills-list text-white">
                     <li class="skill-item">Resolución de conflictos</li>
@@ -212,7 +215,7 @@
     <section class="contact-section bg-black" id="contact">
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-md-4 mb-3 mb-md-0"data-aos="fade-up" data-aos-duration="1000">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
@@ -224,7 +227,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-md-4 mb-3 mb-md-0"data-aos="fade-down" data-aos-duration="1000">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
                 <i class="fas fa-envelope text-primary mb-2"></i>
@@ -236,7 +239,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-md-4 mb-3 mb-md-0"data-aos="fade-up" data-aos-duration="1000">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
@@ -247,7 +250,7 @@
             </div>
           </div>
         </div>
-        <div class="social d-flex justify-content-center">
+        <div class="social d-flex justify-content-center" data-aos="flip-down" data-aos-duration="2000">
           <a class="mx-2" href="https://www.linkedin.com/in/carlos-josu%C3%A9-ugalde-lopez/"><i class="fab fa-linkedin"></i></a>
           <a class="mx-2" href="https://www.instagram.com/cjosuec_10?igsh=MTdlNnlobDJ2NWJuZA=="><i class="fab fa-instagram"></i></a>
           <a class="mx-2" href="https://github.com/Cjosuec10/Proyectos.git"><i class="fab fa-github"></i></a>
@@ -262,8 +265,11 @@
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>
