@@ -430,6 +430,19 @@ background-color: #1E0342;
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+
+  
+  height: 300px; 
+  width: 100%;
+  display: flex;
+}
+
+
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  object-position: top; 
 }
 .proj-imgbx::before {
   content: "";
@@ -668,4 +681,123 @@ background-color: #1E0342;
   font-size: 18px;
   font-weight: 600;
   color: #fff;
+}
+
+
+/************ Project Modal Custom Styles (Sin Degradados) ************/
+
+/* 1. Contenedor Principal */
+.project-modal .modal-content {
+  background-color: #173180 !important; 
+  border: 1px solid rgba(225, 247, 245, 0.2);
+  border-radius: 30px;
+  overflow: hidden;
+  color: #E1F7F5;
+}
+
+/* 2. Encabezado del Modal */
+.project-modal .modal-header {
+  border-bottom: 1px solid rgba(225, 247, 245, 0.1);
+  padding: 25px 30px;
+  background-color: #173180; /* Fondo sólido */
+}
+
+.project-modal .modal-title {
+  font-family: 'Centra', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #fff;
+}
+
+.project-modal .btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+/* 3. Estilo del Cuerpo y Carrusel */
+.project-modal .modal-body {
+  padding: 30px;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.project-modal .carousel-inner {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  order: 1;
+}
+
+/* 4. Indicadores (Círculos) Grises */
+.project-modal .carousel-indicators {
+  position: relative !important;
+  bottom: 0 !important;
+  margin: 25px 0 10px 0 !important;
+  order: 2;
+}
+
+.project-modal .carousel-indicators [data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background-color: #555 !important; /* Gris oscuro */
+  border: none !important;
+  opacity: 1 !important;
+  margin: 0 6px !important;
+}
+
+.project-modal .carousel-indicators .active {
+  background-color: #AA367C !important; /* Rosa sólido */
+  transform: scale(1.3);
+}
+
+/* 5. Sección de Texto y Badges Sólidos */
+.project-modal .content-area {
+  order: 3;
+  margin-top: 10px;
+}
+
+.project-modal h5 {
+  font-family: 'Centra', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff; /* Color sólido en lugar de degradado */
+}
+
+/* Etiquetas de Tecnología */
+.tech-badge {
+  display: inline-block;
+  background: rgba(225, 247, 245, 0.1); /* Fondo muy sutil */
+  border: 1px solid #E1F7F5;
+  color: #E1F7F5;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.tech-badge:hover {
+  background-color: #AA367C; /* Cambio a rosa sólido al pasar el mouse */
+  border-color: #AA367C;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Baja el modal para que no choque con el Navbar fijo */
+.project-modal .modal-dialog {
+  margin-top: 100px !important; /* Ajusta este valor según el alto de tu Navbar */
+  margin-bottom: 50px !important;
+}
+
+/* Asegura que el modal esté por encima del Navbar (z-index del Navbar es 9999) */
+.project-modal {
+  z-index: 10000 !important; 
+}
+
+/* Asegura que el fondo oscuro también cubra el Navbar */
+.modal-backdrop {
+  z-index: 9999 !important;
 }

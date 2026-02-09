@@ -21,7 +21,8 @@ import logoPostman from "../assets/img/postman.svg";
 import logoVisualStudioCode from "../assets/img/visual-studio-code.svg";
 import logoTrello from "../assets/img/trello.svg";
 import logoazureDevOps from "../assets/img/azureDevOps.svg";
-
+import logopython from "../assets/img/python.svg";
+import logolaravel from "../assets/img/laravel.svg";
 
 export const Skills = () => {
   const skillsData = [
@@ -29,16 +30,16 @@ export const Skills = () => {
     { title: "JavaScript", img: logoJs },
     { title: "React", img: logoReact },
     { title: "Node.js", img: logoNode },
-    { title: "Python", img: logoJs }, 
+    { title: "Python", img: logopython }, 
     { title: "Git", img: logoGit },  
     { title: "Php", img: logophp },  
     { title: "Html5", img: logoHtml5 },
-    { title: "Css3", img: logoCss3 },
     { title: "Bootstrap5", img: logoBootstrap5 },
     { title: "Django", img: logoDjango },
-    { title: "Mysql", img: logoMysql },
+    { title: "Trello", img: logoTrello },
     { title: "SqlServer", img: logoSqlServer },
     { title: "Firebase", img: logoFirebase },
+    { title: "Css3", img: logoCss3 },
     { title: "Github", img: logoGithub },
     { title: "Gitlab", img: logoGitlab },
     { title: "Tailwind CSS", img: logoTailwind },
@@ -46,8 +47,9 @@ export const Skills = () => {
     { title: "Figma", img: logoFigma },
     { title: "Postman", img: logoPostman },
     { title: "Visual Studio Code", img: logoVisualStudioCode },
-    { title: "Trello", img: logoTrello },
+    { title: "MySql", img: logoMysql },
     { title: "Azure DevOps", img: logoazureDevOps },
+    { title: "Laravel", img: logolaravel },
   ];
 
   return (
