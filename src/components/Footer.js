@@ -11,9 +11,14 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <MailchimpForm />
+          {/* Este div actúa como un espaciador invisible */}
+          {/* Este div actúa como un espaciador invisible */}
           <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" />
+           <span className="logo-text">
+    <span className="code-bracket">&lt;</span>
+    JOSUE <span className="last-name">UGALDE</span>
+    <span className="code-bracket">/&gt;</span>
+  </span>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">

@@ -565,20 +565,13 @@ background-color: #1E0342;
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 100px 0 50px 0;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.newsletter-bx {
-  background: #FFFFFF;
-  border-radius: 55px;
-  color: #121212;
-  padding: 85px 125px;
-  margin-bottom: 80px;
-  margin-top: -122px;
-}
+
 .newsletter-bx h3 {
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -800,4 +793,63 @@ background-color: #1E0342;
 /* Asegura que el fondo oscuro también cubra el Navbar */
 .modal-backdrop {
   z-index: 9999 !important;
+}
+
+/* Estilo para los mensajes de estado */
+.status-message {
+  margin-top: 20px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-message.success {
+  background: rgba(40, 167, 69, 0.2); /* Verde traslúcido */
+  color: #7dff9e;
+  border-color: rgba(40, 167, 69, 0.4);
+}
+
+.status-message.danger {
+  background: rgba(220, 53, 69, 0.2); /* Rojo traslúcido */
+  color: #ff8e98;
+  border-color: rgba(220, 53, 69, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-text {
+  font-family: 'Centra', sans-serif; /* O la fuente que uses en tu banner */
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.logo-text .code-bracket {
+  color: #AA367C; /* El color rosado/púrpura de tus iconos */
+  font-weight: 700;
+  margin: 0 5px;
+}
+
+.logo-text .last-name {
+  font-weight: 700; /* Hace que el apellido resalte más */
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #dfdaf3 111.58%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Efecto degradado en el apellido */
+}
+
+/* Efecto al pasar el mouse por encima del logo */
+.navbar-brand:hover .logo-text {
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(170, 54, 124, 0.5);
 }
