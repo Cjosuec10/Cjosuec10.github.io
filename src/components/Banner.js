@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/Yo.JPG";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Desarrollador Web", "Diseñador Web", "UI/UX Diseñador" ];
+  const toRotate = [ "Ingeniero en Sistemas de Información", "Desarrollador Web", "Diseñador Web" ];
   const period = 2000;
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Bienvenido a mi portafolio</span>
-                <h1>{`Hola! Soy Josué`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Desarrollador Web", "Diseñador Web", "UI/UX Diseñador" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hola! Soy Josué`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Ingeniero en Sistemas de Información", "Desarrollador Web", "Diseñador Web" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Profesional egresado en Ingeniería en Sistemas de Información, con un enfoque proactivo y autodidacta. 
 Poseo experiencia en desarrollo fullstack y diseño web funcional. Mi enfoque está en crear soluciones de 
 software completas, desde el diseño visual hasta la implementación técnica, y me distingo por la 
@@ -66,12 +66,20 @@ adaptabilidad y la capacidad de aprendizaje rápido para afrontar retos tecnoló
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
+           <TrackVisibility partialVisibility> 
+  {({ isVisible }) => (
+    <div style={{ minHeight: '300px', display: 'flex', justifyContent: 'center' }}> 
+      {/* El minHeight evita que el scroll salte al desaparecer la imagen */}
+      <div className={isVisible ? "animate__animated animate__zoomIn" : "invisible-state"}>
+        <img 
+          src={headerImg} 
+          alt="Header Img" 
+          style={{ width: '300px', height: 'auto' }} 
+        />
+      </div>
+    </div>
+  )}
+</TrackVisibility>
           </Col>
         </Row>
       </Container>

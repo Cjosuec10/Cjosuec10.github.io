@@ -628,3 +628,44 @@ background-color: #1E0342;
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+.custom-container {
+  max-width: 300px; /* Aquí controlas el tamaño máximo */
+  margin: 0 auto;  /* Para centrarla si quieres */
+}
+
+/* Contenedor principal de los iconos */
+.skills-grid {
+  display: grid;
+  /* Crea columnas automáticas de mínimo 150px */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+/* Cada tarjeta de skill */
+.skill-item {
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px); /* Efecto sutil al pasar el mouse */
+}
+
+.skill-item img {
+  width: 80px; /* Tamaño controlado del logo */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-item h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}

@@ -1,64 +1,78 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
+import logoDocker from "../assets/img/docker.svg";
+import logoJs from "../assets/img/javascript.svg";
+import logoReact from "../assets/img/react.svg";
+import logoNode from "../assets/img/node.svg";
+import logophp from "../assets/img/php.svg";
+import logoGit from "../assets/img/git.svg";
+import logoHtml5 from "../assets/img/html5.svg";
+import logoCss3 from "../assets/img/css3.svg"; 
+import logoBootstrap5 from "../assets/img/bootstrap5.svg"; 
+import logoDjango from "../assets/img/django.svg";
+import logoMysql from "../assets/img/mysql.svg";
+import logoSqlServer from "../assets/img/sqlserver.svg";
+import logoFirebase from "../assets/img/firebase.svg";
+import logoGithub from "../assets/img/github.svg";
+import logoGitlab from "../assets/img/gitlab.svg";
+import logoTailwind from "../assets/img/tailwind.svg";
+import logoWordpress from "../assets/img/wordpress.svg";
+import logoFigma from "../assets/img/figma.svg";
+import logoPostman from "../assets/img/postman.svg";
+import logoVisualStudioCode from "../assets/img/visual-studio-code.svg";
+import logoTrello from "../assets/img/trello.svg";
+import logoazureDevOps from "../assets/img/azureDevOps.svg";
+
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+  const skillsData = [
+    { title: "Docker", img: logoDocker },
+    { title: "JavaScript", img: logoJs },
+    { title: "React", img: logoReact },
+    { title: "Node.js", img: logoNode },
+    { title: "Python", img: logoJs }, 
+    { title: "Git", img: logoGit },  
+    { title: "Php", img: logophp },  
+    { title: "Html5", img: logoHtml5 },
+    { title: "Css3", img: logoCss3 },
+    { title: "Bootstrap5", img: logoBootstrap5 },
+    { title: "Django", img: logoDjango },
+    { title: "Mysql", img: logoMysql },
+    { title: "SqlServer", img: logoSqlServer },
+    { title: "Firebase", img: logoFirebase },
+    { title: "Github", img: logoGithub },
+    { title: "Gitlab", img: logoGitlab },
+    { title: "Tailwind CSS", img: logoTailwind },
+    { title: "Wordpress", img: logoWordpress },
+    { title: "Figma", img: logoFigma },
+    { title: "Postman", img: logoPostman },
+    { title: "Visual Studio Code", img: logoVisualStudioCode },
+    { title: "Trello", img: logoTrello },
+    { title: "Azure DevOps", img: logoazureDevOps },
+  ];
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Skills</h2>
+              <p>Tecnologías que domino y utilizo en mis proyectos.</p>
+              
+              {/* Quitamos el Carousel y usamos un div con grid */}
+              <div className="skills-grid">
+                {skillsData.map((skill, index) => (
+                  <div className="skill-item" key={index}>
+                    <img src={skill.img} alt={skill.title} />
+                    <h5>{skill.title}</h5>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+      </div>
+      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   )
 }
