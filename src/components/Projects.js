@@ -99,8 +99,7 @@ export const Projects = () => {
                   <Tab.Pane eventKey="third">
   <div className="d-flex flex-column align-items-center text-center py-5">
     <p>Consulta mi currículum detallado aquí para obtener más información sobre mi perfil profesional y habilidades.</p>
-    <a href="/tu-archivo-cv.pdf" download="TuNombre_CV.pdf">
-      <button className="vvd">
+<a href={`${process.env.PUBLIC_URL}/Josue_CV.pdf`} download="Josue_CV.pdf">      <button className="vvd">
         <span>Descargar CV</span>
       </button>
     </a>
