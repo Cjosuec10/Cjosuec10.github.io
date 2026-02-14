@@ -1,36 +1,21 @@
-# Personal Portfolio Website in React
+# 🚀 Personal Portfolio - Josué | Ingeniero en Sistemas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenido a mi portafolio personal. Este proyecto es una aplicación web responsiva construida con **React**, diseñada para mostrar mi trayectoria profesional, habilidades técnicas y proyectos destacados.
 
-<img width="1266" alt="Screen Shot 2022-06-19 at 2 18 18 PM" src="https://user-images.githubusercontent.com/50160672/174933373-1ba6cadf-1c9a-48c3-aa58-984d0bd62d82.png">
 
-Built using:
+## 👨‍💻 Sobre mí
+Soy un profesional egresado en **Ingeniería en Sistemas de Información**, proactivo y autodidacta. Mi enfoque principal es el desarrollo Fullstack y el diseño web funcional, con gran capacidad de adaptabilidad para resolver problemas tecnológicos complejos.
 
-- Front-end library: React
-- CSS framework: React-bootstrap
-- CSS animations library: Animate.css
+## 🛠️ Tecnologías utilizadas
+* **Core:** [React.js](https://reactjs.org/)
+* **Estilos:** [Bootstrap](https://getbootstrap.com/) & [React-Bootstrap](https://react-bootstrap.github.io/)
+* **Animaciones:** [Animate.css](https://animate.style/)
+* **Iconos:** [React Bootstrap Icons](https://icons.getbootstrap.com/)
+* **Despliegue:** GitHub Pages
 
-In the /personal-portfolio, you can run:
+## 🌟 Características clave
+- **Navegación Fluida:** Scroll suave entre secciones con ajustes de precisión (Offset).
+- **Diseño Responsivo:** Adaptado para dispositivos móviles, tablets y escritorio.
+- **Sección de Proyectos:** Organización por pestañas para diferentes categorías.
+- **Formulario de Contacto:** Listo para recibir consultas directas.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
