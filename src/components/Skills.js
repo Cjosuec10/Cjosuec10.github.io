@@ -1,3 +1,13 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Grid } from "swiper/modules";
+import "swiper/css/grid";
+
+
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import colorSharp from "../assets/img/color-sharp.png";
 import logoDocker from "../assets/img/docker.svg";
 import logoJs from "../assets/img/javascript.svg";
@@ -23,6 +33,7 @@ import logoTrello from "../assets/img/trello.svg";
 import logoazureDevOps from "../assets/img/azureDevOps.svg";
 import logopython from "../assets/img/python.svg";
 import logolaravel from "../assets/img/laravel.svg";
+
 
 export const Skills = () => {
   const skillsData = [
@@ -50,6 +61,7 @@ export const Skills = () => {
     { title: "MySql", img: logoMysql },
     { title: "Azure DevOps", img: logoazureDevOps },
     { title: "Laravel", img: logolaravel },
+
   ];
 
   return (
@@ -58,23 +70,55 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
-              <p>Tecnologías que domino y utilizo en mis proyectos.</p>
+              <h2>Habilidades</h2>
               
-              {/* Quitamos el Carousel y usamos un div con grid */}
-              <div className="skills-grid">
+              
+            <Swiper
+               
+                modules={[Navigation, Pagination, Grid]}
+                spaceBetween={20}
+              
+                slidesPerView={4}
+                slidesPerGroup={4}
+                grid={{ rows: 3, fill: 'row' }} 
+                breakpoints={{
+                  // Móvil: 6 elementos (2 col x 3 filas)
+                  0: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    grid: { rows: 3 },
+                  },
+                  // Tablet: 9 elementos (3 col x 3 filas)
+                  768: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    grid: { rows: 3 },
+                  },
+                  // Desktop: 12 elementos (4 col x 3 filas)
+                  1024: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    grid: { rows: 3 },
+                  },
+                }}
+                navigation={true}
+                pagination={{ clickable: true }}
+                className="mySwiper"
+              >
                 {skillsData.map((skill, index) => (
-                  <div className="skill-item" key={index}>
-                    <img src={skill.img} alt={skill.title} />
-                    <h5>{skill.title}</h5>
-                  </div>
+                  <SwiperSlide key={index}>
+                    <div className="skill-item">
+                      <img src={skill.img} alt={skill.title} />
+                      <h5>{skill.title}</h5>
+                    </div>
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
             </div>
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
+      <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
-  )
-}
+  );
+};

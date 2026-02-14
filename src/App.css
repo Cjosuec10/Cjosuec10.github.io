@@ -853,3 +853,71 @@ background-color: #1E0342;
   letter-spacing: 3px;
   text-shadow: 0 0 10px rgba(170, 54, 124, 0.5);
 }
+
+.skill-bx {
+  padding: 60px 50px;
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.skill-item img {
+  width: 60px; /* Tamaño controlado para que no se vea gigante */
+  height: 60px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Ajuste de las flechas de Swiper para que combinen con tu tema */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff !important;
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+}
+
+/* Ajusta la altura según necesites para que quepan las 3 filas */
+.mySwiper {
+  width: 100%;
+  height: 600px; 
+  margin-top: 50px;
+}
+
+/* IMPORTANTE: Swiper Grid requiere este cálculo para posicionar los elementos */
+.mySwiper .swiper-slide {
+  height: calc((100% - 40px) / 3) !important; /* El '3' es por el número de filas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-item {
+  text-align: center;
+  width: 100%;
+}
+
+.skill-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* Estilo para las flechas (opcional) */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff;
+}
