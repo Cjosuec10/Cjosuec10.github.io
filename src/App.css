@@ -980,3 +980,12 @@ background-color: #1E0342;
 .vvd:hover::before {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .mySwiper .swiper-button-next,
+  .mySwiper .swiper-button-prev {
+    scale: 0.6; /* Las hace más pequeñas */
+    opacity: 0.5; /* Las hace semitransparentes */
+    color: #fff; /* Asegúrate de que el color combine */
+  }
+}
