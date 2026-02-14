@@ -61,7 +61,22 @@ export const Banner = () => {
 Poseo experiencia en desarrollo fullstack y diseño web funcional. Mi enfoque está en crear soluciones de 
 software completas, desde el diseño visual hasta la implementación técnica, y me distingo por la 
 adaptabilidad y la capacidad de aprendizaje rápido para afrontar retos tecnológicos complejos. </p>
-                  <button onClick={() => console.log('connect')}>Resume <ArrowRightCircle size={25} /></button>
+               <button onClick={() => {
+    const section = document.getElementById("projects");
+    if (section) {
+        
+        const yOffset = 0; 
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+
+       
+        const cvTab = document.querySelector('[data-rr-ui-event-key="third"]');
+        if (cvTab) cvTab.click();
+    }
+}}>
+  Resume <ArrowRightCircle size={25} />
+</button>
               </div>}
             </TrackVisibility>
           </Col>

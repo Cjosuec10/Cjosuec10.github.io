@@ -64,8 +64,8 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h2>Proyectos</h2>
+                <p>Creo que la mejor forma de aprender es construyendo. Aquí encontrarás los proyectos que reflejan mi evolución como desarrollador, desde aplicaciones experimentales hasta soluciones completas para problemas reales.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -75,7 +75,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">Contactame</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">CV</Nav.Link>
+                      <Nav.Link eventKey="third">Resume</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -96,9 +96,16 @@ export const Projects = () => {
                     <Tab.Pane eventKey="section">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
+                  <Tab.Pane eventKey="third">
+  <div className="d-flex flex-column align-items-center text-center py-5">
+    <p>Consulta mi currículum detallado aquí para obtener más información sobre mi perfil profesional y habilidades.</p>
+    <a href="/tu-archivo-cv.pdf" download="TuNombre_CV.pdf">
+      <button className="vvd">
+        <span>Descargar CV</span>
+      </button>
+    </a>
+  </div>
+</Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
               </div>}

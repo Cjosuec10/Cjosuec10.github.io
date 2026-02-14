@@ -921,3 +921,39 @@ background-color: #1E0342;
 .swiper-button-next, .swiper-button-prev {
   color: #fff;
 }
+
+.vvd {
+  font-weight: 700;
+  color: #fff;
+  padding: 14px 28px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.vvd span {
+  z-index: 1;
+  position: relative;
+}
+
+.vvd:hover {
+  color: #121212;
+}
+
+.vvd::before {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.vvd:hover::before {
+  width: 100%;
+}
