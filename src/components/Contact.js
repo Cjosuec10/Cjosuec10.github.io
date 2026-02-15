@@ -31,7 +31,7 @@ export const Contact = () => {
 
     // Preparamos los datos para Web3Forms
     const formData = new FormData();
-    formData.append("access_key", "9dc6e397-c5e7-40ee-904d-8f479961e9aa"); // <--- PEGA TU LLAVE AQUÍ
+    formData.append("access_key", "9dc6e397-c5e7-40ee-904d-8f479961e9aa"); 
     formData.append("name", `${formDetails.firstName} ${formDetails.lastName}`);
     formData.append("email", formDetails.email);
     formData.append("phone", formDetails.phone);
@@ -80,7 +80,7 @@ export const Contact = () => {
                       <input type="text" value={formDetails.firstName} placeholder="Nombre" onChange={(e) => onFormUpdate('firstName', e.target.value)} required />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      {/* Corregido: lastName con una sola 't' */}
+                    
                       <input type="text" value={formDetails.lastName} placeholder="Apellido" onChange={(e) => onFormUpdate('lastName', e.target.value)} required />
                     </Col>
                     <Col size={12} sm={6} className="px-1">

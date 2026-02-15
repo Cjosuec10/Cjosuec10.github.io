@@ -4,6 +4,7 @@ import headerImg from "../assets/img/Yo.JPG";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { Download } from 'lucide-react';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -61,21 +62,19 @@ export const Banner = () => {
 Poseo experiencia en desarrollo fullstack y diseño web funcional. Mi enfoque está en crear soluciones de 
 software completas, desde el diseño visual hasta la implementación técnica, y me distingo por la 
 adaptabilidad y la capacidad de aprendizaje rápido para afrontar retos tecnológicos complejos. </p>
-               <button onClick={() => {
-    const section = document.getElementById("projects");
-    if (section) {
-        
-        const yOffset = 0; 
-        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({ top: y, behavior: 'smooth' });
-
-       
-        const cvTab = document.querySelector('[data-rr-ui-event-key="third"]');
-        if (cvTab) cvTab.click();
-    }
-}}>
-  Resume <ArrowRightCircle size={25} />
+               <button 
+  className="cv-download-btn"
+  onClick={() => {
+   
+    const link = document.createElement('a');
+    link.href = `${process.env.PUBLIC_URL}/Josue_CV.pdf`; 
+    link.download = 'Josue_CV.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+>
+  <span>Resume</span> <Download size={25} />
 </button>
               </div>}
             </TrackVisibility>
@@ -84,7 +83,7 @@ adaptabilidad y la capacidad de aprendizaje rápido para afrontar retos tecnoló
            <TrackVisibility partialVisibility> 
   {({ isVisible }) => (
     <div style={{ minHeight: '300px', display: 'flex', justifyContent: 'center' }}> 
-      {/* El minHeight evita que el scroll salte al desaparecer la imagen */}
+     
       <div className={isVisible ? "animate__animated animate__zoomIn" : "invisible-state"}>
         <img 
           src={headerImg} 

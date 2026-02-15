@@ -23,6 +23,8 @@ import logocss3 from "../assets/img/css3.svg";
 import logoJavascript from "../assets/img/javascript.svg";
 import logoPhp from "../assets/img/php.svg";
 import logolaravel from "../assets/img/laravel.svg";
+import { Download } from 'lucide-react';
+
 export const Projects = () => {
 
  const projects = [
@@ -64,15 +66,17 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Proyectos</h2>
-                <p>Creo que la mejor forma de aprender es construyendo. Aquí encontrarás los proyectos que reflejan mi evolución como desarrollador, desde aplicaciones experimentales hasta soluciones completas para problemas reales.</p>
+          <h2 className="mb-4">Proyectos</h2>
+<p className="project-description">
+  Creo que la mejor forma de aprender es construyendo. Aquí encontrarás los proyectos que reflejan mi evolución como desarrollador, desde aplicaciones experimentales hasta soluciones completas para problemas reales.
+</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Proyectos</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Contactame</Nav.Link>
+                      <Nav.Link eventKey="second">Contacto</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Resume</Nav.Link>
@@ -97,10 +101,12 @@ export const Projects = () => {
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                   <Tab.Pane eventKey="third">
-  <div className="d-flex flex-column align-items-center text-center py-5">
+  <div className="resume-tab-content">
     <p>Consulta mi currículum detallado aquí para obtener más información sobre mi perfil profesional y habilidades.</p>
-<a href={`${process.env.PUBLIC_URL}/Josue_CV.pdf`} download="Josue_CV.pdf">      <button className="vvd">
+    <a href={`${process.env.PUBLIC_URL}/Josue_CV.pdf`} download="Josue_CV.pdf" style={{ textDecoration: 'none' }}>
+      <button className="vvd">
         <span>Descargar CV</span>
+        <Download size={25} style={{ marginLeft: '10px', zIndex: 1, position: 'relative' }} />
       </button>
     </a>
   </div>

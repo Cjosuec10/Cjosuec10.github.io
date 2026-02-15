@@ -11,8 +11,8 @@ export const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          {/* Este div actúa como un espaciador invisible */}
-          {/* Este div actúa como un espaciador invisible */}
+          {/* espaciador invisible */}
+          {/* espaciador invisible */}
           <Col size={12} sm={6}>
            <span className="logo-text">
     <span className="code-bracket">&lt;</span>

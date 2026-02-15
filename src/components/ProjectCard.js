@@ -9,7 +9,7 @@ export const ProjectCard = ({ title, description, imgUrl, detailedImages, fullIn
   return (
     <>
       <Col size={12} sm={6} md={4}>
-        {/* Hacemos que todo el cuadro sea cliqueable */}
+        
         <div className="proj-imgbx" onClick={() => setShow(true)} style={{ cursor: "pointer" }}>
           <img src={imgUrl} alt={title} />
           <div className="proj-txtx">
@@ -19,14 +19,14 @@ export const ProjectCard = ({ title, description, imgUrl, detailedImages, fullIn
         </div>
       </Col>
 
-      {/* El Modal: Se activa al hacer clic en la Card */}
+   
       <Modal show={show} onHide={() => setShow(false)} size="lg" centered className="project-modal">
         <Modal.Header closeButton>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Carousel className="mb-4">
-            {/* Si hay imágenes detalladas, las muestra en carrusel, si no, muestra la principal */}
+            
             {detailedImages ? detailedImages.map((img, index) => (
               <Carousel.Item key={index}>
                 <img className="d-block w-100" src={img} alt={`Slide ${index}`} style={{ maxHeight: "400px", objectFit: "contain" }} />
@@ -54,7 +54,7 @@ export const ProjectCard = ({ title, description, imgUrl, detailedImages, fullIn
         display: "flex", 
         flexDirection: "column", 
         alignItems: "center", 
-        width: "80px" // Ancho fijo para que el texto no mueva los otros iconos
+        width: "80px" 
       }}>
         <img 
           src={skill.img} 
