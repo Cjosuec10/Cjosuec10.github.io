@@ -13,7 +13,7 @@ export const Footer = () => {
         <Row className="align-items-center">
           {/* espaciador invisible */}
           {/* espaciador invisible */}
-          <Col size={12} sm={6}>
+          <Col size={12} sm={6} className="text-center text-sm-start">
            <span className="logo-text">
     <span className="code-bracket">&lt;</span>
     JOSUE <span className="last-name">UGALDE</span>

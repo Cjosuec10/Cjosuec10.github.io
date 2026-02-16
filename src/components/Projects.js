@@ -46,7 +46,7 @@ export const Projects = () => {
       title: "TICOBLUE",
       imgUrl: projImg7,
       detailedImages: [projImg7, projImg8, projImg9, projImg10, projImg11, projImg12, projImg13, projImg14],
-      fullInfo: "Desarrollo de una plataforma digital de conexión comercial enfocada en la promoción de negocios locales dentro de las Zonas Azules. El sistema integra módulos de reserva y contacto directo para servicios de alojamiento y restauración, optimizando la visibilidad de pequeños emprendimientos y mejorando la experiencia de búsqueda del usuario",
+      fullInfo: "Plataforma digital para la promoción de negocios en Zonas Azules, que integra reservas de hospedaje, tours y eventos locales. El sistema centraliza la oferta de gastronomía y artesanías, incluyendo geolocalización con rutas de navegación para facilitar el acceso directo a cada establecimiento y potenciar la economía local.",
       technologies: [
         { title: "Html", img: logoHtml5 },
       { title: "Php", img: logoPhp },
